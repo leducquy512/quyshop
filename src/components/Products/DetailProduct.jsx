@@ -87,10 +87,10 @@ const DetailProduct = () => {
                         )}
                     </p>
 
-                    <div className="product-ram-ssd">
-                    {product.sizes?.includes('S') && <button className="ram-ssd-tag">S</button>}
-                    {product.sizes?.includes('M') && <button className="ram-ssd-tag">M</button>}
-                    {product.sizes?.includes('L') && <button className="ram-ssd-tag">L</button>}
+                    <div className="detail-sizes">
+                        {product.sizes?.includes('S') && <button className="size-chip">S</button>}
+                        {product.sizes?.includes('M') && <button className="size-chip">M</button>}
+                        {product.sizes?.includes('L') && <button className="size-chip">L</button>}
                     </div>
 
                     <div className="detail-meta">

@@ -56,9 +56,11 @@ const ProductCard = ({ product }) => {
           src={product.image || 'https://via.placeholder.com/300x200'}
           alt={product.name}
           className="product-image"
+          onClick={() => navigate(`/product/${product.id}`, { state: { product } })}
+          style={{ cursor: 'pointer' }}
         />
       </div>
-      <h3 className="product-name">{product.name}</h3>
+      <h3 className="product-name" onClick={() => navigate(`/product/${product.id}`, { state: { product } })} style={{ cursor: 'pointer' }}>{product.name}</h3>
      <div className="product-ram-ssd">
   {product.sizes?.includes('S') && <button className="ram-ssd-tag">S</button>}
   {product.sizes?.includes('M') && <button className="ram-ssd-tag">M</button>}
